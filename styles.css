@@ -32,10 +32,11 @@ body{
 }
 .page{
     max-width: 900px;
-    margin: 0px auto;
+    margin: auto;
     background: white;
     display: flex;
     min-height: 1200px;
+    margin-bottom: -1px;
 }
 .left{
     width: 40%;
