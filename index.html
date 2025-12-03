@@ -136,23 +136,28 @@
   <script>
   document.getElementById("downloadBtn").addEventListener("click", () => {
       const element = document.querySelector(".page");
+      element.style.transform = "scale(0.85)";
+      element.style.transformOrigin = "top left";
       const opt = {
           margin: 0,
           filename: 'Jervey_Benitez_CV.pdf',
           image: {
             type: 'jpeg', 
-            quality: 0.98 
+            quality: 1 
           },
           html2canvas: { 
-            scale: 2 
+            scale: 3,
+            useCORS: true
           },
           jsPDF: {
-            unit: 'in', 
-            format: 'letter', 
+            unit: 'mm', 
+            format: 'a4', 
             orientation: 'portrait' 
           }
       };
-      html2pdf().set(opt).from(element).save();
+      html2pdf().set(opt).from(element).save().then(() => {
+        element.style.transform = "none";
+      });
   });
   </script>
 </body>
