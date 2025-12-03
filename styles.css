@@ -8,6 +8,7 @@ body{
 .btncont2{
     position: relative;
     width: 50%;
+    margin-top: 20px;
 }
 #downloadBtn{
     position: fixed;
@@ -31,7 +32,7 @@ body{
 }
 .page{
     max-width: 900px;
-    margin: 20px auto;
+    margin: 0px auto;
     background: white;
     display: flex;
     min-height: 1200px;
