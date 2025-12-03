@@ -10,6 +10,9 @@
   
 </head>
 <body>
+  <div class="btncont2">
+    <button id="downloadBtn">Download PDF</button>
+  </div>
   <div class="page">
     <div class="left">
       <img class="profile" src="workimg.png" alt="Jervey's Photo" />
@@ -128,5 +131,29 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+  <script>
+  document.getElementById("downloadBtn").addEventListener("click", () => {
+      const element = document.querySelector(".page");
+      const opt = {
+          margin: 0,
+          filename: 'Jervey_Benitez_CV.pdf',
+          image: {
+            type: 'jpeg', 
+            quality: 0.98 
+          },
+          html2canvas: { 
+            scale: 2 
+          },
+          jsPDF: {
+            unit: 'in', 
+            format: 'letter', 
+            orientation: 'portrait' 
+          }
+      };
+      html2pdf().set(opt).from(element).save();
+  });
+  </script>
 </body>
 </html>
