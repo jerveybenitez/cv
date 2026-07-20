@@ -10,6 +10,6 @@ This CV highlights my experience as a:
 
 ## 📬 Contact
 Email: jerveybenitez@gmail.com  
-CV Link: https://jerveybenitez.github.io/cv/
+CV Link: https://jerveybenitez.github.io/cv/  
 Phone: 0921-562-5242  
 Location: Iligan City, Philippines
